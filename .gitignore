@@ -1,11 +1,26 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+build
+logs
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-mvnw
-mvnw.cmd
-logs/
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
