@@ -20,6 +20,7 @@ public class SecKillController {
 
     /**
      * 普通写法
+     *
      * @return
      */
     @RequestMapping("/seckill.html")
