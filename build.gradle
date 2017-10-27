@@ -3,7 +3,7 @@ buildscript {
         springBootVersion = '1.5.8.RELEASE'
     }
     repositories {
-        //    mavenCentral()
+        // mavenCentral()
         maven {
             url 'http://maven.aliyun.com/nexus/content/groups/public/'
         }
@@ -20,10 +20,12 @@ apply plugin: 'war'
 
 group = 'com.charles'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_1_8
+// sourceCompatibility = 1.8
+// targetCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
-//    mavenCentral()
+    // mavenCentral()
     maven {
         url 'http://maven.aliyun.com/nexus/content/groups/public/'
     }
@@ -32,6 +34,7 @@ repositories {
 configurations {
     providedRuntime
 }
+
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
@@ -43,11 +46,13 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310')
     compile('org.apache.commons:commons-lang3:3.4')
+    compile('commons-collections:commons-collections')
+    compile('com.google.guava:guava:18.0')
     runtime('org.springframework.boot:spring-boot-devtools')
     runtime('mysql:mysql-connector-java')
     runtime('org.lazyluke:log4jdbc-remix:0.2.7')
     compileOnly('org.springframework.boot:spring-boot-configuration-processor')
-    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    // providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.security:spring-security-test')
 }

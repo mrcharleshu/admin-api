@@ -2,6 +2,7 @@
 !gradle/wrapper/gradle-wrapper.jar
 build
 logs
+out
 
 ### STS ###
 .apt_generated
